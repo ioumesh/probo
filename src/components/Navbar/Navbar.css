@@ -40,25 +40,30 @@
   align-items: center;
 }
 
-.button {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
+.button-primary {
+  padding: 8px 32px;
+  color: #262626;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
 }
-
+.button-secondary {
+  padding: 8px 32px;
+  color: #fff !important;
+  background-color: #262626;
+  font-weight: 600;
+  font-size: 14px;
+}
 .button:hover {
   background-color: #0056b3;
 }
 
-.icon-settings {
+.icon-settings img {
   width: 24px;
   height: 24px;
-  background-color: #ccc;
   display: inline-block;
-  border-radius: 50%;
 }
 
 .age-warning {

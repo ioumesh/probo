@@ -16,13 +16,15 @@ const partnershipData = {
 const PartnershipSection = () => {
   return (
     <div className="partnership-section">
-      <div className="partnership-left">
-        <p>{partnershipData.leftContent}</p>
-      </div>
-      <div className="partnership-right">
-        {partnershipData.rightContent.map((image, index) => (
-          <img key={index} src={image} alt={`Partnership ${index + 1}`} />
-        ))}
+      <div className="partnership-content">
+        <div className="partnership-left">
+          <p>{partnershipData.leftContent}</p>
+        </div>
+        <div className="partnership-right">
+          {partnershipData.rightContent.map((image, index) => (
+            <img key={index} src={image} alt={`Partnership ${index + 1}`} />
+          ))}
+        </div>
       </div>
     </div>
   );

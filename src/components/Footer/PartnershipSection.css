@@ -1,26 +1,33 @@
 .partnership-section {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 20px 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+.partnership-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #f5f5f5;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
 }
-
 .partnership-left,
 .partnership-right {
   flex: 1;
-  padding: 0 20px;
 }
 
 .partnership-right {
   display: flex;
-  justify-content: space-around; /* This ensures equal spacing */
+  justify-content: space-around;
   align-items: center;
 }
 
 .partnership-right img {
-  width: 80px; /* Adjust based on your preference */
-  height: 80px;
-  border-radius: 50%; /* Makes the image round */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }

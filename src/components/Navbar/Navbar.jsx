@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ isFooter=true }) => {
+const Navbar = ({ isFooter = true }) => {
   return (
-    <nav className={isFooter?"navbar":"navbar-footer"}>
+    <nav className={isFooter ? "navbar" : "navbar-footer"}>
       <div className="navbar-content">
         <div className="navbar-left">
           <Link to="/" className="navbar-logo">
@@ -24,9 +24,14 @@ const Navbar = ({ isFooter=true }) => {
         </div>
         <div className="navbar-right">
           <span className="age-warning">For 18 years and above only</span>
-          <button className="button">Download App</button>
-          <button className="button">Login/Signup</button>
-          <i className="icon-settings">Icon</i>
+          <button className="button-primary">Download App</button>
+          <button className="button-secondary">Login/Signup</button>
+          <i className="icon-settings">
+            <img
+              src="https://probo.in/_next/static/media/translation.5ad894fb.png"
+              alt="translate"
+            />
+          </i>
         </div>
       </div>
     </nav>

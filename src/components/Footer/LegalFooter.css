@@ -1,12 +1,19 @@
 .legal-footer {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 20px 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+.legal-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #f5f5f5;
-  font-size: 14px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
 }
-
 .legal-links a {
   margin-right: 16px;
   text-decoration: none;
