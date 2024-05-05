@@ -20,6 +20,7 @@ const tabData = [
   {
     icon: "/images/youtube.png",
     name: "YouTube",
+    view: "youtube",
   },
   {
     icon: "https://probo.gumlet.io/image/upload/probo_product_images/News@3x.png",
@@ -36,6 +37,7 @@ const tabData = [
   {
     icon: "https://probo.gumlet.io/image/upload/probo_product_images/NBA@3x.png",
     name: "Basketball",
+    view: "basketball",
   },
   {
     icon: "https://probo.gumlet.io/image/upload/probo_product_images/Chess@3x.png",
@@ -119,12 +121,60 @@ const Tabs = () => {
     );
   };
 
+  const YoutubeComponent = () => {
+    const youtubeData = tradeData.filter((item) => item.view === "youtube");
+
+    return (
+      <>
+        <div className="bitcoin-view">
+          {youtubeData[0].trade.map((item, index) => {
+            return (
+              <TradeCard
+                key={`trade-${index}`}
+                icon={item.icon}
+                content={item.content}
+                expire={item.expire}
+                yesPrice={item.yesPrice}
+                noPrice={item.noPrice}
+              />
+            );
+          })}
+        </div>
+      </>
+    );
+  };
+  const BasketBallComponent = () => {
+    const basketBallData = tradeData.filter((item) => item.view === "basketball");
+    return (
+      <>
+        <>
+          <div className="cricket-view-chip">
+            {basketBallData[0].teams.map((item, index) => {
+              return (
+                <Chip
+                  key={`chip-${index}`}
+                  icon={item.icon}
+                  teamA={item.teamA}
+                  teamB={item.teamB}
+                />
+              );
+            })}
+          </div>
+        </>
+      </>
+    );
+  };
+
   const renderComponent = (viewState) => {
     switch (viewState) {
       case "cricket":
         return <CricketComponent />;
       case "bitcoin":
         return <BitcoinComponent />;
+      case "youtube":
+        return <YoutubeComponent />;
+      case "basketball":
+        return <BasketBallComponent />;
       default:
         return <div>No component found for the current view.</div>;
     }
