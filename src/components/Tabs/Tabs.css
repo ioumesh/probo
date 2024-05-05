@@ -31,15 +31,15 @@
 .tab-name {
   width: 100px;
 }
-.title{
+.title {
   font-size: 20px;
 }
 .title-wrapper {
   display: flex;
   align-items: center;
-  gap: 1rem ;
+  gap: 1rem;
 }
-.title-wrapper-icon{
+.title-wrapper-icon {
   width: 20px;
   height: 20px;
 }
@@ -55,4 +55,22 @@
   border: 1px solid #e3e3e3;
   border-radius: 12px;
   margin-bottom: 20px;
+}
+
+.cricket-view-chip::-webkit-scrollbar {
+  display: none;
+}
+.cricket-view-chip {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
+.cricket-view-matchcard {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.bitcoin-view {
+  display: flex;
+  gap: 20px;
 }
