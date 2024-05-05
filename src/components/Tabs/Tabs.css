@@ -1,0 +1,58 @@
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.tab-buttons::-webkit-scrollbar {
+  display: none;
+}
+.tab-buttons button {
+  background: #fff;
+  padding: 8px 10px;
+  border: 1px solid #e3e3e3;
+  border-radius: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.tab-buttons button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.tab-buttons button.active {
+  background-color: rgb(189, 187, 187);
+  color: white;
+}
+.tab-name {
+  width: 100px;
+}
+.title{
+  font-size: 20px;
+}
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem ;
+}
+.title-wrapper-icon{
+  width: 20px;
+  height: 20px;
+}
+.sections {
+  margin-top: 20px;
+}
+
+.section {
+  background-color: #fff;
+  z-index: 0;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}

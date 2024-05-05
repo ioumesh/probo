@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    margin-top: 5%;
+    background-color: #F5F5F5;
+  }
+  
+  .left-section {
+    flex:70%;
+    width: 600px;
+    padding: 20px;
+  }
+  
+  .right-section {
+    flex:30%;
+    padding: 20px;
+  }
+  
+  /* Responsive layout */
+  @media screen and (max-width: 768px) {
+    .container {
+      margin-top: 30%;
+      flex-direction: column;
+      overflow: auto;
+    }
+  
+    .left-section,
+    .right-section {
+      flex: 100%;
+      width: 100%;
+    }
+  }
+  
