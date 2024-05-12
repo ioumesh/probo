@@ -41,3 +41,20 @@
   font-style: normal;
   color: #666;
 }
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Add more padding for better spacing on mobile */
+  }
+
+  .footer-section {
+    text-align: center; /* Center-align text for better readability on mobile */
+    margin-bottom: 20px; /* Add bottom margin for spacing between sections */
+  }
+
+  .footer-section:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last section */
+  }
+}
