@@ -9,6 +9,7 @@
   border: 1px solid #e3e3e3;
   color: #262626;
   font-size: 16px;
+  cursor: pointer;
 }
 .chip-text{
   width: 100px;

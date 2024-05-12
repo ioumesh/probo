@@ -5,6 +5,7 @@ import Chip from "../cards/Chip";
 import MatchCard from "../cards/MatchCard";
 import TradeCard from "../cards/TradeCard";
 import { tradeData } from "../data/data";
+import { useNavigate } from "react-router-dom";
 
 const tabData = [
   {
@@ -56,6 +57,11 @@ const tabData = [
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
   const tabsRef = useRef(null);
+  const navigate = useNavigate();
+
+  const handleRoutes = (url) => {
+    navigate(`/events/${url}`);
+  };
 
   const scrollToSection = (index) => {
     const section = document.getElementById(tabData[index].name);
@@ -78,6 +84,7 @@ const Tabs = () => {
                   icon={item.icon}
                   teamA={item.teamA}
                   teamB={item.teamB}
+                  handler={() => handleRoutes(`${item.teamA}-${item.teamB}`)}
                 />
               );
             })}
@@ -144,7 +151,9 @@ const Tabs = () => {
     );
   };
   const BasketBallComponent = () => {
-    const basketBallData = tradeData.filter((item) => item.view === "basketball");
+    const basketBallData = tradeData.filter(
+      (item) => item.view === "basketball"
+    );
     return (
       <>
         <>
